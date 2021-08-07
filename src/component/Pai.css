@@ -1,0 +1,67 @@
+.pai {
+    background: url(./img/pai.png) no-repeat;
+    background-size: 480.3px 338.7px;
+    height: 57.9px;
+    width: 41.7px;
+}
+
+.received {
+    transform: rotate(-90deg);
+    margin-left: 8.1px;
+    margin-right: 8.1px;
+    position: relative;
+    top: 7.78px;
+}
+
+.chi.received {
+    order: -1;
+}
+
+.ming {
+    display:flex;
+    flex-wrap: nowarp;
+}
+
+#f11 {background-position: 1.573% 2.457%;}
+#f12 {background-position: 12.372% 2.457%;}
+#f13 {background-position: 22.777% 2.457%;}
+#f14 {background-position: 33.766% 2.457%;}
+#f15 {background-position: 44.596% 2.457%;}
+#f16 {background-position: 66.074% 2.457%;}
+#f17 {background-position: 76.828% 2.457%;}
+#f18 {background-position: 87.62% 2.457%;}
+#f19 {background-position: 98.358% 2.457%;}
+
+#f21 {background-position: 1.573% 50.107%;}
+#f22 {background-position: 12.372% 50.107%;}
+#f23 {background-position: 22.777% 50.107%;}
+#f24 {background-position: 33.766% 50.107%;}
+#f25 {background-position: 44.596% 50.107%;}
+#f26 {background-position: 66.074% 50.107%;}
+#f27 {background-position: 76.828% 50.107%;}
+#f28 {background-position: 87.62% 50.107%;}
+#f29 {background-position: 98.358% 50.107%;}
+
+#f01 {background-position: 1.573% 26.282%;}
+#f02 {background-position: 12.372% 26.282%;}
+#f03 {background-position: 22.777% 26.282%;}
+#f04 {background-position: 33.766% 26.282%;}
+#f05 {background-position: 44.596% 26.282%;}
+#f06 {background-position: 66.074% 26.282%;}
+#f07 {background-position: 76.828% 26.282%;}
+#f08 {background-position: 87.62% 26.282%;}
+#f09 {background-position: 98.358% 26.282%;}
+
+#f31 {background-position: 1.573% 73.825%;}
+#f32 {background-position: 12.372% 73.825%;}
+#f33 {background-position: 22.777% 73.825%;}
+#f34 {background-position: 33.766% 73.825%;}
+#f35 {background-position: 44.596% 73.825%;}
+#f36 {background-position: 55.335% 73.825%;}
+#f37 {background-position: 66.074% 73.825%;}
+
+#b {background-position: 66.074% 95.513%;}
+
+#t15 {background-position: 55.335% 2.457%;}
+#t25 {background-position: 55.335% 50.107%;}
+#t05 {background-position: 55.335% 26.282%;}

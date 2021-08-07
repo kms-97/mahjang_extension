@@ -1,0 +1,14 @@
+button, img {
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.refresh {
+    position: fixed;
+    left: 95%;
+    top: 10%;
+    z-index: 100;
+}

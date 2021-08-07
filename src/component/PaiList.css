@@ -1,0 +1,13 @@
+.hand-container, .ming-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.ming-container {
+    margin-left: 60px;
+    flex-direction: row-reverse
+}
+
+.pai.tsumo {
+    margin-left: 5px;
+}

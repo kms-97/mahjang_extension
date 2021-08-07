@@ -1,0 +1,7 @@
+.dora-container, .dora-identified, .dora-unidentified {
+    display: flex;
+}
+
+.dora-container {
+    margin-left: 50px;
+}

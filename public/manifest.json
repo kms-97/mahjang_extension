@@ -1,7 +1,7 @@
 {
   "name": "test",
   "description": "Build an Extension!",
-  "version": "1.0",
+  "version": "0.1",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
@@ -9,7 +9,8 @@
   "permissions": [
     "tabs",
     "activeTab",
-    "scripting"
+    "scripting",
+    "storage"
   ],
   "action": {
     "default_icon": {
@@ -22,6 +23,16 @@
     {
       "matches": ["https://game.mahjongsoul.com/index.html"],
       "js": ["content.js"]
+    }
+  ],
+  "externally_connectable": {
+    "ids": ["*"],
+    "matches": ["https://game.mahjongsoul.com/*"]
+  },
+  "web_accessible_resources": [
+    {
+    "resources": ["page.js"],
+    "matches": ["https://game.mahjongsoul.com/*"]
     }
   ]
 }

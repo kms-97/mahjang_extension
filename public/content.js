@@ -1,26 +1,24 @@
 /* global chrome */
 
+const evtToPage = chrome.runtime.id;
+const evtFromPage = chrome.runtime.id + '-response';
 
-window.onload = function() {
-    document.getElementById('layaCanvas').addEventListener("click", main)
-}
-
-function isInGame() {
-	return window != null && window.view != null && window.view.DesktopMgr != null && window.view.DesktopMgr.player_link_state != null;
-}
-
-function main() {
-    console.log('func main works');
-    if (isInGame()) {
-        console.log('isInGame works');   
-        chrome.runtime.sendMessage({
-            action: "sendPaiInfo",
-            source: setHandPai()
-        })
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.message == 'requestInfo') {
+        addEventListener(evtFromPage, (e) => {
+            sendResponse({
+                playerPai : JSON.parse(e.detail.playerPai),
+                gameState : JSON.parse(e.detail.gameState),
+                playerState : JSON.parse(e.detail.allPlayerState),
+                doraState : JSON.parse(e.detail.doraState)
+            })
+        }, {once: true});
+        dispatchEvent(new Event(evtToPage));
+        return true
     }
-}
+});
 
-function setHandPai() {
-    let handPai = window.view.DesktopMgr.Inst.players[0].hand;
-    return handPai
-}
+const script = document.createElement('script');
+script.src = chrome.runtime.getURL('page.js');
+script.dataset.args = JSON.stringify({evtToPage, evtFromPage});
+document.documentElement.appendChild(script);

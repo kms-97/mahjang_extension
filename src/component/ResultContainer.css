@@ -1,0 +1,35 @@
+.result-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 130px;
+}
+
+.result-sub-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px
+}
+
+.result-sub-container > .pai-list {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.result-container > .pai-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.pai-list {
+    display: flex;
+    flex-flow: row warp;
+    width: 650px;
+    margin-left: 20px;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
