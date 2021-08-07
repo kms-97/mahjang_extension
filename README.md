@@ -1,7 +1,7 @@
 
 # 작혼 어시스턴트 - mjsoul assistant
 
- 웹 마작 게임 작혼 플레이에 도움을 주는 크롬 익스텐션입니다. 
+ 웹 마작 게임 [작혼](https://mahjongsoul.com/) 플레이에 도움을 주는 크롬 익스텐션입니다. 
 
 
 ## License
