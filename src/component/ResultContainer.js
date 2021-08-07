@@ -74,7 +74,7 @@ const ResultContainer = ({currentPai, dora, playerState, playerIndex, gameState}
                                     {max.zumo.score[0]}
                                 </div>
                                 <div className='fanfu-score'>
-                                    ({max.zumo.score[1][0]} {max.zumo.score[1][0]})
+                                    ({max.zumo.score[1][0]} {max.zumo.score[1][1]})
                                 </div>
                             </div>
                         </div>
