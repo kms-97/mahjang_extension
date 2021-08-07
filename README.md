@@ -6,7 +6,7 @@
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/kms-97/mahjang_extension/blob/master/LICENSE)
 
   
 ## Installation
