@@ -47,7 +47,7 @@ function App() {
     <div>
       {
         (pai.playerHand.length + pai.playerMing.length * 3 < 13)
-        ?<button onClick={requestInfo}>
+        ?<button className="ready-refresh" onClick={requestInfo}>
           <img src={refreshImg}/>
         </button>
         :

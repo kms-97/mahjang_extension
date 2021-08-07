@@ -1,9 +1,7 @@
-button, img {
+.refresh > img {
     height: 20px;
     width: 20px;
-    background-color: transparent;
-    outline: none;
-    border: none;
+    background-color: white;
 }
 
 .refresh {
@@ -11,4 +9,23 @@ button, img {
     left: 95%;
     top: 10%;
     z-index: 100;
+    outline: none;
+    border: none;
+    background: transparent
+}
+
+.ready-refresh {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    border: none;
+    background: transparent
+}
+
+.ready-refresh > img {
+    height: 40px;
+    width: 40px;
+    background-color: white;
 }
