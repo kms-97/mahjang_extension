@@ -22,13 +22,17 @@ function App() {
   const requestInfo = () => {
     chrome.tabs.query({url : 'https://game.mahjongsoul.com/index.html'}, (tab) => {
       chrome.tabs.sendMessage(tab[0].id, {message : 'requestInfo'}, async (response) => {
-        let res = await response;
-        if (res) {
-          setGame(res.gameState);
-          setDora(res.doraState);
-          setPlayers(res.playerState);
-          setPlayerIndex(getPlayerIndex(res.playerState, true));
-          setPai(res.playerPai);
+        try {
+          let res = await response;
+          if (res) {
+            setGame(res.gameState);
+            setDora(res.doraState);
+            setPlayers(res.playerState);
+            setPlayerIndex(getPlayerIndex(res.playerState, true));
+            setPai(res.playerPai);
+          }
+        } catch(err) {
+          setGame({lobby: true})
         }
       })
     })
@@ -46,7 +50,7 @@ function App() {
   return (
     <div>
       {
-        (pai.playerHand.length + pai.playerMing.length * 3 < 13)
+        (pai.playerHand.length + pai.playerMing.length * 3 < 13 || game.lobby == 1)
         ?<button className="ready-refresh" onClick={requestInfo}>
           <img src={refreshImg}/>
         </button>
