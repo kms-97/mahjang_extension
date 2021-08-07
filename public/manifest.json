@@ -14,9 +14,9 @@
   ],
   "action": {
     "default_icon": {
-      "16": "logo192.png",
-      "32": "logo192.png",
-      "64": "logo192.png"
+      "16": "icon.png",
+      "32": "icon.png",
+      "64": "icon.png"
     }
   },
   "content_scripts" : [
