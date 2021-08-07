@@ -1,7 +1,7 @@
 {
-  "name": "test",
-  "description": "Build an Extension!",
-  "version": "0.1",
+  "name": "mjsoul assistant",
+  "description": "web mahjang game 'mahjang soul' assistant",
+  "version": "1.0",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
