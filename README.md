@@ -20,7 +20,7 @@
 
 ![Sample1](https://user-images.githubusercontent.com/72490858/128600722-dd010e0e-3eb8-46c2-ae04-f28b149c9831.PNG)
 
-![Sample2](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Sample2](https://user-images.githubusercontent.com/72490858/128600753-4eef7204-c2e4-4d1d-8b83-dc4742c7d01f.PNG)
 
   
 ## Acknowledgements
