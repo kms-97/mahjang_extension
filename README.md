@@ -18,7 +18,7 @@
 
 ## Screenshots
 
-![Sample1](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Sample1](https://user-images.githubusercontent.com/72490858/128600722-dd010e0e-3eb8-46c2-ae04-f28b149c9831.PNG)
 
 ![Sample2](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
