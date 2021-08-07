@@ -20,14 +20,14 @@ const ResultContainer = ({currentPai, dora, playerState, playerIndex, gameState}
         }
     };
 
-    if (hand.length % 3 == 1) { // 패가 13장
-        if (shenten > 0) {// 노텐파이
+    if (hand.length % 3 == 1) {
+        if (shenten > 0) {
             const youkouPai = ShentenUtil.findYoukouPai(shoupai, shenten);
             
             return(
                 <div className='result-container'>
                     <div className="shenten">
-                        {shenten}
+                        {shenten}샹텐
                     </div>
                     <div className='result-sub-container'>
                         <div className='select-pai'/>
@@ -42,7 +42,7 @@ const ResultContainer = ({currentPai, dora, playerState, playerIndex, gameState}
                     </div>
                 </div>
             )
-        } else if (shenten == 0) { // 텐파이
+        } else if (shenten == 0) { 
             const youkouPai = ShentenUtil.findYoukouPai(shoupai, shenten);
             const result = youkouPai.map(([type, idx]) => {
                 let addShoupai = ShentenUtil.addPai(shoupai, type, idx)
@@ -112,13 +112,13 @@ const ResultContainer = ({currentPai, dora, playerState, playerIndex, gameState}
             return(
                 <div className='result-container'>
                     <div className="shenten">
-                        {shenten}
+                        텐파이
                     </div>
                     {result}
                 </div>
             )
         }
-    } else { // 패가 14장 텐파이 여부 상관없이 버림패 구한 뒤 요구패 출력
+    } else {
         let discardPai = ShentenUtil.findDiscardPai(shoupai, shenten)
         let youkouPai22 = discardPai.map(([type, idx]) => {
             let discardShoupai = ShentenUtil.reducePai(shoupai, type, idx);
@@ -155,7 +155,9 @@ const ResultContainer = ({currentPai, dora, playerState, playerIndex, gameState}
         return (
             <div className='result-container'>
                 <div className="shenten">
-                    {shenten}
+                    {
+                    shenten == 0 ? '텐파이' : <div>{shenten}샹텐</div>
+                    }
                 </div>
                 {result}
             </div>
