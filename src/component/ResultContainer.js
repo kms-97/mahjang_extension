@@ -67,17 +67,18 @@ const ResultContainer = ({currentPai, dora, playerState, playerIndex, gameState}
                                 }
                             </div>
                             <div className='fanshu'>
-                                {max.zumo.fanshu} + '판 '    
-                                + {max.zumo.fu} + '부'
-                            </div>
-                            <div className='last-score'>
-                                {max.zumo.score[0]}
+                                {max.zumo.fanshu}판 {max.zumo.fu}부
                             </div>
                             <div className='score'>
-                                ({max.zumo.score[1]})
+                                <div className='total-score'>
+                                    {max.zumo.score[0]}
+                                </div>
+                                <div className='fanfu-score'>
+                                    ({max.zumo.score[1]})
+                                </div>
                             </div>
                         </div>
-                        : <div className='result'><div className='zumo'>역 없음</div></div>
+                        :<div className='zumo'>역 없음</div>
                         }
                         {max.ron.hupai.length > 0 ?
                         <div className='ron'>
@@ -93,17 +94,18 @@ const ResultContainer = ({currentPai, dora, playerState, playerIndex, gameState}
                                 }
                             </div>
                             <div className='fanshu'>
-                                {max.ron.fanshu} + '판 '    
-                                + {max.ron.fu} + '부'
-                            </div>
-                            <div className='last-score'>
-                                {max.ron.score[0]}
+                                {max.ron.fanshu}판 {max.ron.fu}부
                             </div>
                             <div className='score'>
-                                ({max.ron.score[1]})
+                                <div className='total-score'>
+                                    {max.ron.score[0]}
+                                </div>
+                                <div className='fanfu-score'>
+                                    ({max.ron.score[1][0]} {max.ron.score[1][1]})
+                                </div>
                             </div>
                         </div>
-                        : <div className='ron-result'>역 없음</div>
+                        : <div className='ron'>역 없음</div>
                         }
                     </div>
                 </div>
@@ -111,8 +113,16 @@ const ResultContainer = ({currentPai, dora, playerState, playerIndex, gameState}
             })
             return(
                 <div className='result-container'>
-                    <div className="shenten">
-                        텐파이
+                    <div style={{display: 'flex', flexFlow: 'row', marginBottom: 3}}>
+                        <div className="shenten">
+                            텐파이
+                        </div>
+                        <div className='title-zumo'>
+                            쯔모
+                        </div>
+                        <div className='title-ron'>
+                            론
+                        </div>
                     </div>
                     {result}
                 </div>
@@ -120,15 +130,15 @@ const ResultContainer = ({currentPai, dora, playerState, playerIndex, gameState}
         }
     } else {
         let discardPai = ShentenUtil.findDiscardPai(shoupai, shenten)
-        let youkouPai22 = discardPai.map(([type, idx]) => {
+        let youkouPaiList = discardPai.map(([type, idx]) => {
             let discardShoupai = ShentenUtil.reducePai(shoupai, type, idx);
             let youkouPai = ShentenUtil.findYoukouPai(discardShoupai, shenten);
             ShentenUtil.addPai(shoupai, type, idx)
             return([[type, idx]].concat([youkouPai]))
         })
-        youkouPai22.sort((b,a)=>(a[1].length-b[1].length))
+        youkouPaiList.sort((b,a)=>(a[1].length-b[1].length))
 
-        const result = youkouPai22.map(([discard, youkou]) => {
+        const result = youkouPaiList.map(([discard, youkou]) => {
             let doraIdx = (discard[1] == 0) ? 't' : 'f';
             let typeIdx = (discard[0] == 'm') ? 1 : discard[0] == 'p' ? 0 : discard[0] == 's' ? 2 : 3;
             if (discard[1] == 0) discard[1] = 5

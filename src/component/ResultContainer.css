@@ -29,10 +29,27 @@
 
 .result {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-left: 20px;
 }
 
 .shenten {
     margin-left: 5px;
+}
+
+.result > .zumo, .ron {
+    width: 300px
+}
+
+.score {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.title-zumo {
+    margin-left: 21px;
+}
+
+.title-ron {
+    margin-left: 275px;
 }
