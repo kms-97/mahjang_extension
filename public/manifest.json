@@ -21,18 +21,27 @@
   },
   "content_scripts" : [
     {
-      "matches": ["https://game.mahjongsoul.com/index.html"],
+      "matches": [
+        "https://game.mahjongsoul.com/index.html",
+        "https://mahjongsoul.game.yo-star.com/*"
+      ],
       "js": ["content.js"]
     }
   ],
   "externally_connectable": {
     "ids": ["*"],
-    "matches": ["https://game.mahjongsoul.com/*"]
+    "matches": [
+      "https://game.mahjongsoul.com/*",
+      "https://mahjongsoul.game.yo-star.com/*"
+    ]
   },
   "web_accessible_resources": [
     {
     "resources": ["page.js"],
-    "matches": ["https://game.mahjongsoul.com/*"]
+    "matches": [
+      "https://game.mahjongsoul.com/*",
+      "https://mahjongsoul.game.yo-star.com/*"
+    ]
     }
   ]
 }

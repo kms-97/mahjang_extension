@@ -20,7 +20,7 @@ function App() {
 
 
   const requestInfo = () => {
-    chrome.tabs.query({url : 'https://game.mahjongsoul.com/index.html'}, (tab) => {
+    chrome.tabs.query({url : ["https://game.mahjongsoul.com/index.html", "https://mahjongsoul.game.yo-star.com/*"]}, (tab) => {
       chrome.tabs.sendMessage(tab[0].id, {message : 'requestInfo'}, async (response) => {
         try {
           let res = await response;
