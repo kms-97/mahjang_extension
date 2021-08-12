@@ -287,7 +287,7 @@ const findDora = (shoupai, dora) => {
 }
 
 export const getOwnFu = (playerIndex, kyouku) => {
-    return Math.abs(playerIndex- kyouku)
+    return (playerIndex+kyouku)%4
 }
 
 function _xiangting(m, d, g, j) {

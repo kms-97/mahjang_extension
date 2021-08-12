@@ -8,7 +8,7 @@ const ResultContainer = ({currentPai, dora, playerState, playerIndex, gameState}
     let shenten = ShentenUtil.xiangting(shoupai);
 
     let param = {
-        zhuangfeng: gameState.kyouku, // 場風 (0: 東, 1: 南, 2: 西, 3: 北)
+        zhuangfeng: gameState.fu, // 場風 (0: 東, 1: 南, 2: 西, 3: 北)
         menfeng: ShentenUtil.getOwnFu(playerIndex, gameState.kyouku), // 和了者の自風
         hupai: {
             lizhi: Number(playerState[playerIndex]['isLiqi']), // 1: 立直, *2: ダブル立直*
