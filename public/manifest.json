@@ -1,0 +1,42 @@
+{
+  "name": "mjsoul assistant",
+  "description": "web mahjang game 'mahjang soul' assistant",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "./assets/background.js"
+  },
+  "permissions": ["tabs", "activeTab", "scripting", "storage"],
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "64": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://game.mahjongsoul.com/index.html",
+        "https://mahjongsoul.game.yo-star.com/*"
+      ],
+      "js": ["./assets/content.js"]
+    }
+  ],
+  "externally_connectable": {
+    "ids": ["*"],
+    "matches": [
+      "https://game.mahjongsoul.com/*",
+      "https://mahjongsoul.game.yo-star.com/*"
+    ]
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["./assets/page.js"],
+      "matches": [
+        "https://game.mahjongsoul.com/*",
+        "https://mahjongsoul.game.yo-star.com/*"
+      ]
+    }
+  ]
+}
