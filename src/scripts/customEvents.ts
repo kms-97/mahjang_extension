@@ -14,7 +14,7 @@ export class RequestGameInfoEvent extends CustomEvent<any> {
 export class ResponseGameInfoEvent extends CustomEvent<GameInfo> {
   private static type = "ResponseGameInfo";
 
-  constructor(detail: boolean) {
+  constructor(detail: GameInfo) {
     super(ResponseGameInfoEvent.type, {
       bubbles: true,
       composed: true,
